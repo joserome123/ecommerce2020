@@ -29,7 +29,7 @@ a {
 .nav-title {
     width: 30%;
     background-color: #ececec;
-    padding: 15px 40px;
+    padding: 13px 18px;
     text-align: center;
 }
 
@@ -42,6 +42,9 @@ ul {
     /*Texto y elementos del nav*/
     display: flex;
     justify-content: flex-center;
+    white-space: nowrap;
+
+    ;
 }
 
 li {
@@ -56,9 +59,19 @@ li {
 }
 
 li a {
-    color: blue;
+    columns: #000000;
 }
 
+/*Selectores child*/
+.nav-menu ul li {
+    border-top: none;
+}
+.nav-menu ul li ul.dropdown li:first-child {
+    border-top: none;
+}
+.nav-menu ul li ul.dropdown li {
+    border-top: 1px solid #333333;
+}
 .nav-menu ul li a {
     padding: 10px 20px;
 }
@@ -89,7 +102,14 @@ ul li ul:hover {
   
 }
 
+/*Color text*/
+.nav-menu ul li a:hover {
+    color:#2b51b9;
+}
+
 ul li ul li {
     clear: both;
     width: 100%;
 }
+
+/*Responsive*/
