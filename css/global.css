@@ -1,8 +1,19 @@
+/*Formateamos margenes de elementos principales*/
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
+/*Eliminamos style list*/
+a {
+    text-decoration: none;
+}
+
+.nav-menu {
+    width: 70%;
+}
+
 .main-nav {
     background: #ececec;
     color: #ffffff;
@@ -14,102 +25,71 @@
     align-items: center;
 }
 
+/*logo*/
 .nav-title {
     width: 30%;
     background-color: #ececec;
-
-    padding: 16px 40px;
+    padding: 15px 40px;
     text-align: center;
 }
-.nav-menu {
-    width: 70%;
-}
 
-.nav-menu ul {
+ul {
+    background-color: #ececec;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    /*Texto y elementos del nav*/
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-center;
 }
 
-.main-nav-list {
-    list-style-type: none;
-}
-.main-nav-list ul {
-    list-style-type: none;
+li {
+    color: #ececec;
+    background:#ececec;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
-.nav-menu ul li {
-    display: inline-flexbox;
+li a {
+    color: blue;
 }
 
 .nav-menu ul li a {
-    padding: 10px 10px;
-    color: #000000;
-    font-size: 20px;
+    padding: 10px 20px;
+}
+
+li:hover {
+    background: red;
     cursor: pointer;
-
-    text-decoration: none;
-    
 }
 
-.nav-menu ul ul {
-    width: 180px;
+ul li ul {
+    background: #ececec;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
     position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
     display: none;
-    left: auto;
-    background-color: #ffffff;
-    z-index: 99;
-    border: 0;
-    top:auto;
 }
 
-.nav-menu ul li a:hover {
-    color:#2b51b9;
-    font-weight: bold;
-}
-
-.nav-menu li:hover ul {
-    display: block;
-}
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
   
-.nav-menu li li:hover ul {
-    display: flex;
-    position: absolute;
-    background-color: #ececec;
-  }
+}
 
-
-
-/*Responsive menu*/
-@media screen and (max-width:1000px){
-    .nav-menu{
-        width: 100%;
-    }
-    .main-nav .nav-menu {
-        height: auto;
-    }
-    .main-nav .nav-title {
-        text-align: left;
-        width: 100%;
-    }
-    .nav-menu ul {
-        justify-content: space-around;
-    }
-   
-    .nav-menu ul li {
-        width: 20%;
-        padding: 10px 0px;
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .nav-menu ul ul {
-        width: 180px;
-        position: absolute;
-        display: none;
-        left: auto;
-        background-color: #ffffff;
-        z-index: 99;
-        border: 0;
-        top: auto;
-    }
+ul li ul li {
+    clear: both;
+    width: 100%;
 }
