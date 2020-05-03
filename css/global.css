@@ -110,6 +110,8 @@ li a {
 .nav-menu ul li ul.dropdown li:first-child {
     border-top: none;
 }
+/*altura para ul li internos de nav dropdown*/
+
 .nav-menu ul li ul.dropdown li {
     border-top: 1px solid #ffffff;
 }
@@ -127,8 +129,6 @@ li:hover {
 }
 
 /*Efect on a links*/
-
-/*.nav-menu*/
 
 ul li ul {
     background: #ececec;
@@ -149,12 +149,14 @@ ul li ul:hover {
     opacity: 1;
     display: block;
     margin-top: 18%;
+    
 
 }
 
 ul li ul li {
     clear: both;
     width: 100%;
+    height: 51px;
 }
 
 /*Responsive*/
